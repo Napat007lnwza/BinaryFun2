@@ -1,0 +1,117 @@
+body {
+  font-family: 'Prompt', sans-serif;
+  background-color: #f4f4f9;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* หน้าโหลด */
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* มืดลงเพื่อเน้นการโหลด */
+  z-index: 9999;
+}
+
+.loading-spinner {
+  border: 8px solid #f3f3f3; /* สีพื้นหลัง */
+  border-top: 8px solid #3498db; /* สีของวงกลมที่หมุน */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+.loading-text {
+  margin-top: 20px;
+  color: white;
+  font-size: 18px;
+}
+
+/* การหมุนวงกลม */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* หน้าเกม */
+.game-container {
+  display: none; /* เริ่มต้นซ่อนหน้าเกม */
+  margin-top: 50px;
+}
+
+h2 {
+  color: #2c3e50;
+}
+
+#question {
+  font-size: 24px;
+  color: #333;
+  margin: 20px 0;
+}
+
+.answers button {
+  background-color: #3498db;
+  color: white;
+  margin: 8px;
+  width: 200px;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.answers button:hover {
+  background-color: #2980b9;
+}
+
+#score {
+  font-size: 20px;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+#music-control {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+/* ปรับให้เหมาะสมกับหน้าจอขนาดเล็ก */
+@media (max-width: 600px) {
+  .answers button {
+    width: 80%;
+    font-size: 16px;
+  }
+  #question {
+    font-size: 20px;
+  }
+  #score {
+    font-size: 18px;
+  }
+}
+
+/* ปรับปุ่มเพลง */
+#toggle-music {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+#toggle-music:hover {
+  background-color: #45a049;
+}

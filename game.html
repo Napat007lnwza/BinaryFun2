@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚀 BinaryFun</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- หน้าโหลด -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">กำลังโหลด. . .</div>
+    </div>
+
+    <!-- หน้าเกม -->
+    <div class="game-container" id="game-container">
+        <h2>🔢 คำถาม:</h2>
+        <div id="question">คำถามจะมาแสดงที่นี่</div>
+        <div class="answers">
+            <button class="answer-btn"></button>
+            <button class="answer-btn"></button>
+            <button class="answer-btn"></button>
+            <button class="answer-btn"></button>
+        </div>
+        <p>คะแนน: <span id="score">0</span></p>
+    </div>
+
+    <!-- ปุ่มเพลง -->
+    <div id="music-control">
+        <button id="toggle-music">🔊</button>
+    </div>
+
+    <!-- เพลงพื้นหลัง (ใส่เพลงของคุณแทน music.mp3) -->
+    <audio id="background-music" loop>
+        <source src="https://www.youtube.com/watch?v=KAFWz_IitD4" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

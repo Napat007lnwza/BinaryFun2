@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚀 BinaryFun</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="score-container">
+    <h2>🎉 ผลลัพธ์ของคุณ</h2>
+    <p>ชื่อผู้เล่น: <span id="player-name"></span></p>
+    <p>คะแนน: <span id="final-score"></span></p>
+
+    <h3>🏆 ลำดับคะแนนทั้งหมด</h3>
+    <div class="table-container">
+      <table id="score-table">
+        <thead>
+          <tr>
+            <th>อันดับ</th>
+            <th>ชื่อผู้เล่น</th>
+            <th>คะแนน</th>
+          </tr>
+        </thead>
+        <tbody id="highscore-body"></tbody>
+      </table>
+    </div>
+
+    <button onclick="restartGame()">เริ่มใหม่</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
